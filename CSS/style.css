@@ -1,0 +1,93 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  max-width: 100%;
+  background-image: linear-gradient(
+      to left,
+      rgba(0, 0, 0, 0.514),
+      rgba(0, 0, 0, 0.514)
+    ),
+    url("https://images.pexels.com/photos/159844/cellular-education-classroom-159844.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+#form-wrapper {
+  height: 135vh;
+}
+
+#form-container {
+  background: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 0.616),
+    rgba(0, 0, 0, 0.616)
+  );
+  width: auto;
+}
+
+.fa-exclamation-circle {
+  color: #dc3545;
+  visibility: hidden;
+}
+
+.fa-check-circle {
+  color: #28a745;
+  visibility: hidden;
+}
+
+.form-group,
+.col-auto {
+  position: relative;
+}
+.form-group i,
+.col-auto i {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+.form-group.success .fa-check-circle,
+.col-auto.success .fa-check-circle {
+  visibility: visible;
+}
+
+.form-group.error .fa-exclamation-circle,
+.col-auto.error .fa-exclamation-circle {
+  visibility: visible;
+}
+
+.form-group input,
+#dropdownMenuButton,
+.col-auto input {
+  background-color: #2f3332;
+  color: white;
+}
+
+/* Media Queries */
+/* small and Extra small device */
+@media only screen and (max-width: 576px) {
+  #form-container {
+    width: 90% !important;
+  }
+
+  #form-wrapper {
+    height: 130vh !important;
+  }
+}
+
+@media only screen and (max-width: 1025px) {
+  #form-container {
+    width: 90% !important;
+  }
+
+  #form-wrapper {
+    height: 100vh;
+  }
+}
+
+/* $sql = mysqli_query($dbconnect, "INSERT INTO std_course(S_No,Course_title,Full_Name,Position,Company,Email,Street_address_Line1,Street_address_Line2,Country, City, State_Region, Pin_code,Phone) values('','$CourseTitle','$UserName','$UserPosition','$userCompany','$userEmail','$userAddLine1','$userAddLine2','$UserCountry','$UserCity','$UserState','$UserPinCode','$UserPhone')") */
